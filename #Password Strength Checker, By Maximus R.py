@@ -22,13 +22,13 @@ def check_password_strength(password):
     
     
 
-    if re.search (r"(A-Z)", password):
+    if re.search(r"[A-Z]", password):
         score += 2
-    if re.search (r"(a-z)", password):
+    if re.search(r"[a-z]", password):
         score += 2
     if re.search(r"[!@#$%^&*?+_=\-]", password):
         score += 4
-    if re.search (r"(0-9)", password):
+    if re.search(r"[0-9]", password):
         score += 2
     
     return score
